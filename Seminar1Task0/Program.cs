@@ -3,12 +3,12 @@
 
 Console.WriteLine("Введите число: ");
 string? inputNum = Console.ReadLine(); // ??"0"
-if (inputNum!=null)
+if (inputNum != null)
 {
     // Парсим введенное число
     // int num = int.Parse(inputNum);
     // int res = num*num;
     // Console.WriteLine(res);
-    Console.WriteLine("Квадрат числа: "+ (int)Math.Pow(int.Parse(inputNum), 2));
+    Console.WriteLine("Квадрат числа: " + (int)Math.Pow(int.Parse(inputNum), 2));
 }
 
