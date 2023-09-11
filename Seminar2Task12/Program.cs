@@ -6,11 +6,12 @@ Console.WriteLine("Введите первое число:");
 int numA = int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine("Введите второе число:");
 int numB = int.Parse(Console.ReadLine() ?? "0");
-if (numB % numA == 0)
-{
-    Console.WriteLine("Второе число кратно первому.");
-}
-else
-{
-    Console.WriteLine("Первое число кратно второму. Остаток от деления: " + numB % numA);
-}
+//if (numB % numA == 0)
+//{
+//    Console.WriteLine("Второе число кратно первому.");
+//}
+//else
+//{
+//    Console.WriteLine("Первое число кратно второму. Остаток от деления: " + numB % numA);
+//}
+Console.WriteLine(numB % numA == 0 ? "Второе число кратно первому.": "Первое число кратно второму. Остаток от деления: " + numB % numA);
