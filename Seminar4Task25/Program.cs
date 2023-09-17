@@ -10,9 +10,9 @@
 //     return num;
 // }
 
-// double RaiseToPow(int numA, int numB)
+// decima RaiseToPow(int numA, int numB)
 // {
-//     double result = 0;
+//     decima result = 0;
 //     result = Math.Pow(numA, numB);
 //     return result;
 // }
@@ -24,7 +24,7 @@
 
 // int numA = ReadData("Введите число А: ");
 // int numB = ReadData("Введите степень - число B: ");
-// double numAtoB = RaiseToPow(numA, numB);
+// decima numAtoB = RaiseToPow(numA, numB);
 // PrintResult("Число А в степени B равно "+numAtoB);
 
 
