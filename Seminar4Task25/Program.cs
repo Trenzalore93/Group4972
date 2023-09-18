@@ -10,9 +10,9 @@
 //     return num;
 // }
 
-// decima RaiseToPow(int numA, int numB)
+// double RaiseToPow(int numA, int numB)
 // {
-//     decima result = 0;
+//     double result = 0;
 //     result = Math.Pow(numA, numB);
 //     return result;
 // }
@@ -24,8 +24,13 @@
 
 // int numA = ReadData("Введите число А: ");
 // int numB = ReadData("Введите степень - число B: ");
-// decima numAtoB = RaiseToPow(numA, numB);
-// PrintResult("Число А в степени B равно "+numAtoB);
+// if (numB < 0) Console.WriteLine("Число B должно быть натуральным!");
+// else
+// {
+//     double numAtoB = RaiseToPow(numA, numB);
+//     PrintResult("Число А в степени B равно " + numAtoB);
+// }
+
 
 
 // ______________________________________________________________________________________ 
