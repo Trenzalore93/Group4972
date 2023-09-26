@@ -2,7 +2,7 @@
 // [3 7 22 2 78] -> 76
 // [2 0,4 9 7,2 78] -> 77,6
 
-
+//заполняем массив вещественными значениями
 double[] FillArray(int length, int min, int max)
 {
     double [] array = new double[length];
@@ -25,16 +25,17 @@ void PrintArray(double[] array) // выводим массив
     Console.WriteLine("");
 }
 
+
 double DifferenceMaxMin(double[] array)
 {
     double min = array[0];
     double max = array[0];
-    for (int i = 1; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i++) //находим минимальное и минимальное значение
     {
         if(array[i]<min) min = array[i];
         if(array[i]>max) max = array[i];
     }
-    double diff = max - min;
+    double diff = max - min; //считаем разницу
     return diff;
 }
 

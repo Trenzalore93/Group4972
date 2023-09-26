@@ -4,6 +4,7 @@
 // [-4, -6, 89, 6] -> 0
 // (со звездочкой) Найдите все пары в массиве и выведите пользователю
 
+// генерация массива
 int[] GenArray(int length, int min, int max)
 {
     int[] array = new int[length];
@@ -15,6 +16,7 @@ int[] GenArray(int length, int min, int max)
     return array;
 }
 
+// печатаем массив
 void PrintArray(int[] array) // выводим массив
 {
     Console.Write("[");
@@ -26,6 +28,7 @@ void PrintArray(int[] array) // выводим массив
     Console.WriteLine("");
 }
 
+// вычисляем сумму элементов, стоящих на нечётных позициях
 int SumUnevenIndex(int[] array)
 {
     int sum = 0;

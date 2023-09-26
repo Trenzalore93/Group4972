@@ -3,6 +3,7 @@
 // [845, 222, 367, 123 -> 1
 // (со звездочкой) Отсортировать массив методом пузырька
 
+// генерируем массив
 int[] GenArray(int length, int min, int max)
 {
     int[] array = new int[length];
@@ -14,6 +15,7 @@ int[] GenArray(int length, int min, int max)
     return array;
 }
 
+// печатаем массив
 void PrintArray(int[] array) // выводим массив
 {
     Console.Write("[");
@@ -25,6 +27,7 @@ void PrintArray(int[] array) // выводим массив
     Console.WriteLine("");
 }
 
+// считаем количество количество чётных чисел
 int CountElement(int[] array)
 {
     int count = 0;
@@ -35,6 +38,7 @@ int CountElement(int[] array)
     return count;
 }
 
+// сортировка
 int[] Sorting(int[] array)
 {
     int temp = array[0];
