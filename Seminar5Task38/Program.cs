@@ -1,19 +1,8 @@
 ﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 // [2 0,4 9 7,2 78] -> 77,6
-// (со звездочкой) Отсортируйте массив методом вставки и методом подсчета, а затем найдите разницу между первым и последним элементом. 
-// Для задачи со звездочкой использовать заполнение массива целыми числами.
 
-// double[] GenArray(int length, int min, int max)
-// {
-//     double[] array = new double[length];
 
-//     for (int i = 0; i < length; i++)
-//     {
-//         array[i] = Math.Round(array.Next(-100, 101)*0.1, 1);
-//     }
-//     return array;
-// }
 double[] FillArray(int length, int min, int max)
 {
     double [] array = new double[length];
@@ -36,7 +25,7 @@ void PrintArray(double[] array) // выводим массив
     Console.WriteLine("");
 }
 
-double[] DifferenceMaxMin(double[] array)
+double DifferenceMaxMin(double[] array)
 {
     double min = array[0];
     double max = array[0];
@@ -49,7 +38,7 @@ double[] DifferenceMaxMin(double[] array)
     return diff;
 }
 
-double[] array = FillArray(5, 0, 20);
+double[] array = FillArray(5, 1, 20);
 PrintArray(array);
 double result = DifferenceMaxMin(array);
 Console.WriteLine($"Разница между максимальным и минимальным значениями массива - {result}");
