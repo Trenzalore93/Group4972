@@ -16,7 +16,7 @@ void FindIntersectionPoint(double b1, double k1, double b2, double k2)
         double x = 0;
         double y = 0;
         x = (b2 - b1) / (k1 - k2);
-        y = k1 * x + b1;
+        y = (k1 * b2 - k2 * b1) / (k1 - k2);
         Console.WriteLine($"Точка пересечения прямых имеет координаты: x = {x}, y = {y}");
     }
 }
