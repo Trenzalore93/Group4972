@@ -44,20 +44,35 @@ void PrintArray(int[,] matrix)
 // Метод FindAverageInColumns принимает целочисленную матрицу типа int[,] и возвращает одномерный массив типа double. 
 // Этот метод вычисляет среднее значение чисел в каждом столбце матрицы и сохраняет результаты в виде списка.
 
+// double[] FindAverageInColumns(int[,] matrix)
+// {
+//     double[] average = new double[matrix.GetLength(1)];
+//     int sum = 0;
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         for (int i = 0; i < matrix.GetLength(0); i++)
+//         {
+//             sum = sum + matrix[i, j]; 
+//         }
+//         average[j] = sum / matrix.GetLength(1);
+//     }
+
+//     return average;
+// }
+
 double[] FindAverageInColumns(int[,] matrix)
 {
-    double[] average = new double[matrix.GetLength(1)];
-    int sum = 0;
+    double[] result = new double[matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
+        result[j] = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            sum = sum + matrix[i, j]; 
+            result[j] += matrix[i, j];
         }
-        average[j] = sum / matrix.GetLength(1);
+        result[j] /= matrix.GetLength(0);
     }
-
-    return average;
+    return result;
 }
 
 // Метод PrintListAvr принимает одномерный массив, возвращенный методом FindAverageInColumns и выводит этот список на экран в формате "The averages in columns are: x.x0 x.x0 x.x0 ...", 
@@ -65,12 +80,12 @@ double[] FindAverageInColumns(int[,] matrix)
 
 void PrintListAvr(double[] list)
 {
-    Console.Write("The averages in columns are:"+"\t");
+    Console.Write("The averages in columns are:" + "\t");
     Console.WriteLine("");
     {
         for (int i = 0; i < list.Length; i++)
         {
-            Console.Write(Math.Round(list[i], 2)+"\t");
+            Console.Write(list[i].ToString("0.00") + "\t");
         }
     }
 }
