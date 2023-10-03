@@ -6,8 +6,13 @@
 // 26(1,0,1) 55(1,1,1)
 
 
-
-
+//получение данных от пользователя
+int ReadData(string msg)
+{
+    Console.WriteLine(msg);
+    int num = int.Parse(Console.ReadLine() ?? "0");
+    return num;
+}
 // наполняем массив случайными уникальными числами
 int[,,] Fill3DArray(int param1, int param2, int param3, int min, int max)
 {
