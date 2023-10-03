@@ -52,11 +52,11 @@ int ReadData(string msg)
 
 int[] FindNumberByPosition(int[,] array, int x, int y)
 {
-    int[] result = new int[0,1000];
+    int[] result = new int[1000];
     if (x > array.GetLength(0) - 1 || y > array.GetLength(1)) return null;
     else
     {
-        int[] result = { array[x - 1, y - 1], 0 };
+        result = { array[x - 1, y - 1], 0 };
         return result;
     }
 }
