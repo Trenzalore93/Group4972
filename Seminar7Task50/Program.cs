@@ -50,13 +50,13 @@ int ReadData(string msg)
 // Если координаты находятся в пределах границ, метод должен вернуть массив с двумя значениями: значением числа в указанной позиции, 
 // а второй элемент должен быть равен 0, чтобы показать, что операция прошла успешно без ошибок.
 
-int[] FindNumberByPosition(int[,] array, int x, int y)
+int[]? FindNumberByPosition(int[,] array, int x, int y)
 {
     int[] result = new int[1000];
     if (x > array.GetLength(0) - 1 || y > array.GetLength(1)) return null;
     else
     {
-        result = { array[x - 1, y - 1], 0 };
+        result = {array[x - 1, y - 1], 0};
         return result;
     }
 }
@@ -67,7 +67,7 @@ int[] FindNumberByPosition(int[,] array, int x, int y)
 
 void PrintCheckIfError(int[] result, int x, int y)
 {
-    if(result == null) Console.WriteLine("There is no such index");
+    if (result == null) Console.WriteLine("There is no such index");
     else Console.WriteLine($"The number in [{x}, {y}] is {result[0]}");
 }
 
